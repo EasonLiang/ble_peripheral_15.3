@@ -431,21 +431,33 @@ static void idle_state_handle(void)
 int main(void)
 {
     // Initialize.
-    log_init();
-    leds_init();
-    timers_init();
-    buttons_init();
-    power_management_init();
-    ble_stack_init();
-    gap_params_init();
-    gatt_init();
-    services_init();
-    advertising_init();
-    conn_params_init();
+    log_init();                     //init log
+    // log_init();
+    leds_init();                    //init leds
+    // leds_init();
+    timers_init();                  //init timers
+    // timers_init();
+    buttons_init();                 //init buttons
+    // buttons_init();
+    power_management_init();        //init power management
+    // power_management_init();
+    ble_stack_init();               //init ble_stack
+    // ble_stack_init();
+    gap_params_init();              //init gap_params
+    // gap_params_init();
+    gatt_init();                    //gatt_init
+    // gatt_init();
+    services_init();                //init services
+    // services_init();
+    advertising_init();             //init advertiseing
+    // advertising_init();
+    conn_params_init();             //init conn_params
+    // conn_params_init();
 
     // Start execution.
     NRF_LOG_INFO("Blinky example started.");
-    advertising_start();
+    advertising_start();            //start advertising 
+    // advertising_start();            
 
     // Enter main loop.
     for (;;)
